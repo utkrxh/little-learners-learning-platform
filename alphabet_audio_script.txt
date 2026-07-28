@@ -1,0 +1,26 @@
+A for Apple
+B for Ball
+C for Cat
+D for Dog
+E for Elephant
+F for Fish
+G for Grapes
+H for House
+I for Ice Cream
+J for Juice
+K for Kite
+L for Lion
+M for Mango
+N for Nest
+O for Orange
+P for Parrot
+Q for Queen
+R for Rabbit
+S for Sun
+T for Tiger
+U for Umbrella
+V for Van
+W for Watch
+X for Xylophone
+Y for Yak
+Z for Zebra

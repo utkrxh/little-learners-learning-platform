@@ -1,49 +1,72 @@
-import alphabet from "../data/alphabet";
+import ActivityCard from "../components/english/ActivityCard";
 
 function English() {
-
-  function speak(letter, word) {
-    const speech = new SpeechSynthesisUtterance(`${letter} for ${word}`);
-    speech.rate = 0.8;
-    speech.pitch = 1.1;
-    window.speechSynthesis.speak(speech);
-  }
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-100 to-pink-100 p-10">
+    <div className="min-h-screen bg-gradient-to-b from-sky-100 via-white to-sky-50 py-12 px-6">
 
-      <h1 className="text-5xl font-bold text-center text-blue-700 mb-12">
-        🔤 Learn English
-      </h1>
+      <div className="max-w-7xl mx-auto">
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <h1 className="text-5xl font-black text-center text-sky-700 mb-4">
+          🔤 English Learning
+        </h1>
 
-        {alphabet.map((item) => (
+        <p className="text-center text-xl text-gray-600 mb-12">
+          Choose an activity and start learning!
+        </p>
 
-          <div
-            key={item.letter}
-            onClick={() => speak(item.letter, item.word)}
-            className="bg-white rounded-3xl shadow-lg p-8 text-center cursor-pointer hover:scale-110 transition duration-300"
-          >
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-            <div className="text-6xl mb-4">
-              {item.emoji}
-            </div>
+          <ActivityCard
+            emoji="📚"
+            title="Alphabet Lessons"
+            description="Learn A-Z with pictures, sounds, quizzes and XP."
+            color="bg-sky-200"
+            link="/alphabet"
+          />
 
-            <h2 className="text-6xl font-bold text-pink-500">
-              {item.letter}
-            </h2>
+          <ActivityCard
+            emoji="✍️"
+            title="Letter Tracing"
+            description="Practice writing every alphabet."
+            color="bg-pink-200"
+            link="/tracing"
+          />
 
-            <p className="text-2xl mt-4 font-semibold">
-              {item.word}
-            </p>
+          <ActivityCard
+            emoji="🎈"
+            title="Balloon Game"
+            description="Pop the correct alphabet balloon."
+            color="bg-green-200"
+            link="/balloons"
+          />
 
-          </div>
+          <ActivityCard
+            emoji="🔢"
+            title="Numbers 1–100"
+            description="Learn numbers with counting, audio and quizzes."
+            color="bg-purple-200"
+            link="/numbers"
+          />
 
-        ))}
+          <ActivityCard
+            emoji="📚"
+            title="Stories"
+            description="Coming Soon"
+            color="bg-yellow-200"
+            link="/english"
+          />
+
+          <ActivityCard
+            emoji="🎵"
+            title="Alphabet Song"
+            description="Coming Soon"
+            color="bg-orange-200"
+            link="/english"
+          />
+
+        </div>
 
       </div>
-
     </div>
   );
 }
