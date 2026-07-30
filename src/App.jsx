@@ -4,7 +4,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
-import English from "./pages/English";
+import English from "./pages/EnglishPage";;
 import AlphabetPage from "./pages/AlphabetPage";
 import NumbersPage from "./pages/NumbersPage";
 import Tracing from "./pages/Tracing";
